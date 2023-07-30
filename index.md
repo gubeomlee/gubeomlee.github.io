@@ -12,7 +12,7 @@ permalink: /
 
 - 이메일: 29tigerhg@gmail.com
 - 전화번호: 010 -
-- 깃허브:[링크](https://github.com/gubeomlee){: .btn .fs-5 .mb-4 .mb-md-0 style="font-size: 0.75rem;"}
+- 깃허브:[링크](https://github.com/gubeomlee)
 
 ## 프로젝트
 
