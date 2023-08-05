@@ -1,7 +1,7 @@
 ---
 layout: default
 title: CS 스터디
-nav_order: 51
+nav_order: 200
 has_children: true
 permalink: /docs/cs_스터디
 ---
