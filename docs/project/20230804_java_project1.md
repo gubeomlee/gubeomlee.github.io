@@ -38,13 +38,7 @@ nav_order: 20
 
 1. user.json 파일 읽기
 
-- json파일을 읽은 다음 형변환 과정에 문제가 발생했다. json파일을 읽을 때 사용한 Gson의 fromJson메서드의 반환형을 User[] 설정했으나, User 클래스에서 user를 List<User> 타입으로 관리하고 있었다. 이로인해 User 클래스의 메서드들이 유저정보에 접근하지 못하는 문제가 발생했었다. 이를 해결하기 위해 다음의 코드로 형변환 하는 작업을 추가했다.
-
-```java
-if (arr != null) {
-    list = new ArrayList<>(Arrays.asList(arr));
-}
-```
+- json파일을 읽은 다음 형변환 과정에 문제가 발생했다. json파일을 읽을 때 사용한 Gson의 fromJson메서드의 반환형을 User[] 설정했으나, User 클래스에서 user를 List<User> 타입으로 관리하고 있었다. 이로인해 User 클래스의 메서드들이 유저정보에 접근하지 못하는 문제가 발생했었다. 이를 해결하기 위해 형변환 하는 작업을 추가했다.
 
 2. videoReview.json 파일 쓰기
 
