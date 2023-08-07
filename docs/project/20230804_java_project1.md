@@ -7,6 +7,8 @@ nav_order: 20
 
 # Java 관통 프로젝트 1: 영상정보 관리시스템 구축
 
+[깃허브](https://github.com/gubeomlee/SSAFIT_Project){: .btn .fs-5 .mb-4 .mb-md-0 }
+
 # 프로젝트 목표
 
 - 객체지향 개념과 JAVA 프로그램의 기본 구조를 이해하고 활용할 수 있다.
