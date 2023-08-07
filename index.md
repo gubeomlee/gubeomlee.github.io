@@ -42,12 +42,9 @@ permalink: /
 ### SSAFY(삼성 청년 소프트웨어 아카데미 ) 10기 | 2023.07 ~ 진행중
 
 - 자바 비전공반
-- 알고리즘 문제 풀이(algorithm)
-- 깃허브: [링크](https://github.com/gubeomlee/algorithm)
-- 점심 알고리즘 스터디(SSAFY10-Class8-Algo)
-- 깃허브: [링크](https://github.com/yyoungl/SSAFY10-Class8-Algo)
-- 금융권 CS 스터디(SSAFY 8반 금융개발CS)
-- 노션: [링크](https://www.notion.so/a6c0516ca3344261bc4a72b9a0b30b2f?v=26f7624d59ba4133a1910cb4939b2206)
+- 알고리즘 문제 풀이(algorithm) [깃허브](https://github.com/gubeomlee/algorithm)
+- 점심 알고리즘 스터디(SSAFY10-Class8-Algo) [깃허브](https://github.com/yyoungl/SSAFY10-Class8-Algo)
+- 금융권 CS 스터디(SSAFY 8반 금융개발CS) [노션](https://www.notion.so/a6c0516ca3344261bc4a72b9a0b30b2f?v=26f7624d59ba4133a1910cb4939b2206)
 
 ### 코드스테이츠 블록체인 엔지니어링 부트캠프 | 2022.11 ~ 2023.04
 
