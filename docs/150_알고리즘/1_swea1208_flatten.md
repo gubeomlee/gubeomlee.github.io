@@ -1,6 +1,6 @@
 ---
 layout: default
-title: swea1208
+title: swea1208_flatten
 parent: 알고리즘
 nav_order: 1
 ---
