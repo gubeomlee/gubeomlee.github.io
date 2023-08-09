@@ -5,6 +5,10 @@ parent: 알고리즘
 nav_order: 2
 ---
 
+백준허브 깃허브: [링크](https://github.com/gubeomlee/algorithm)
+
+알고리즘 스터디: [링크](https://github.com/yyoungl/SSAFY10-Class8-Algo)
+
 [문제 링크](https://www.acmicpc.net/problem/9663)
 
 - NQueen 문제를 처음 풀었을 때는 파이썬을 사용했다. 당시 풀이로는 문제 없이 통과되었는데, 자바로 풀자 메모리 초과 문제가 발생했다. 체스판 배열 자체를 백트래킹으로 전달했는데, 이것이 메모리 초과의 원인이었다. 이 문제를 해결하기 위해 2가지 풀이를 만들었다. 첫번째 풀이는 체스판 배열을 검사하는 과정 메모리 사용량을 줄였다.
