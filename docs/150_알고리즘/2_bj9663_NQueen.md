@@ -1,6 +1,6 @@
 ---
 layout: default
-title: bj9663_NQueen
+title: BJ9663_NQueen
 parent: 알고리즘
 nav_order: 2
 ---
@@ -8,6 +8,10 @@ nav_order: 2
 백준허브 깃허브: [링크](https://github.com/gubeomlee/algorithm)
 
 알고리즘 스터디: [링크](https://github.com/yyoungl/SSAFY10-Class8-Algo)
+
+# BJ96663_NQueen
+
+---
 
 [문제 링크](https://www.acmicpc.net/problem/9663)
 

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: swea1208_flatten
+title: SWEA1208_flatten
 parent: 알고리즘
 nav_order: 1
 ---
@@ -8,6 +8,10 @@ nav_order: 1
 백준허브 깃허브: [링크](https://github.com/gubeomlee/algorithm)
 
 알고리즘 스터디: [링크](https://github.com/yyoungl/SSAFY10-Class8-Algo)
+
+# SWEA1208_flatten
+
+---
 
 [문제 링크](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV139KOaABgCFAYh)
 

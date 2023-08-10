@@ -5,6 +5,10 @@ parent: 정렬
 nav_order: 3
 ---
 
+# 카운팅 정렬
+
+---
+
 ```java
 import java.util.Arrays;
 

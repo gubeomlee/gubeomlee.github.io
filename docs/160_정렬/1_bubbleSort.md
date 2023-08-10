@@ -5,6 +5,10 @@ parent: 정렬
 nav_order: 1
 ---
 
+# 버블정렬
+
+---
+
 ```java
 import java.util.Arrays;
 
