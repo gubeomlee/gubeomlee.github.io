@@ -18,10 +18,17 @@ permalink: /
 
 ### 영상정보 관리시스템 구축
 
-- 링크: [깃허브](https://github.com/gubeomlee/SSAFIT_Project), [블로그](https://gubeomlee.github.io/docs/project/20230804_java_project1/)
+- 링크: [깃허브](https://github.com/gubeomlee/SSAFIT_Project), [블로그](https://gubeomlee.github.io/docs/project/20230804_project1/)
 - 포지션: 백엔드
 - 기술스택: JAVA
 - 프로젝트 설명: 2인 1조로 하루동안 진행된 단기 프로젝트다. MVC 구조를 활용하여 영상정보 관리시스템을 구축하는 것을 목적으로 한다.
+
+### 영상정보 관리시스템 프론트개발
+
+- 링크: [깃허브](https://github.com/gubeomlee/SSAFIT_Project2), [블로그](https://gubeomlee.github.io/docs/project/20230813_project2/)
+- 포지션: 프론트앤드
+- 기술스택: HTML, CSS, JS
+- 프로젝트 설명: 2인 1조로 하루동안 진행된 단기 프로젝트다. Bootstrap을 이용한 프론트개발을 목적으로 한다.
 
 ## 기술
 
