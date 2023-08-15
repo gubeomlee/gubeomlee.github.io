@@ -2,6 +2,7 @@
 layout: default
 title: selectionSort
 parent: 정렬 이론
+grand_parent: 알고리즘 이론
 nav_order: 2
 ---
 
