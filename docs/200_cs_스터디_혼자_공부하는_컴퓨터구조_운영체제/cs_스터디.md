@@ -3,6 +3,7 @@ layout: default
 title: CS 스터디 컴퓨터 구조, 운영체제
 nav_order: 200
 has_children: true
+permalink: /docs/cs_스터디_컴퓨터구조_운영체제
 ---
 
 # CS 스터디
