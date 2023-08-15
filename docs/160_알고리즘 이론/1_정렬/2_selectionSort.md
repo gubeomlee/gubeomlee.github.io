@@ -1,7 +1,7 @@
 ---
 layout: default
 title: selectionSort
-parent: 정렬
+parent: 정렬 이론
 nav_order: 2
 ---
 

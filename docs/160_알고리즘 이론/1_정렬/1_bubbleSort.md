@@ -1,7 +1,7 @@
 ---
 layout: default
 title: bubbleSort
-parent: 정렬
+parent: 정렬 이론
 nav_order: 1
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: BJ9663_NQueen
-parent: 알고리즘
+parent: 알고리즘 문제풀이
 nav_order: 2
 ---
 
