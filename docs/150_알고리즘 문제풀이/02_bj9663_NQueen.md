@@ -9,7 +9,7 @@ nav_order: 2
 
 알고리즘 스터디: [링크](https://github.com/yyoungl/SSAFY10-Class8-Algo)
 
-# BJ96663_NQueen
+# BJ9663_NQueen
 
 ---
 
