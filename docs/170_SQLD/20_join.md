@@ -1,10 +1,10 @@
 ---
 layout: default
-title: join
+title: JOIN
 parent: SQLD
 nav_order: 20
 ---
 
-# join
+# JOIN
 
 ---

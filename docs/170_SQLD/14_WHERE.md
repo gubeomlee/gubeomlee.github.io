@@ -1,10 +1,10 @@
 ---
 layout: default
-title: where 절
+title: WHERE
 parent: SQLD
 nav_order: 14
 ---
 
-# where 절
+# WHERE
 
 ---

@@ -1,10 +1,10 @@
 ---
 layout: default
-title: group by, having 절
+title: GROUP BY, HAVING
 parent: SQLD
 nav_order: 16
 ---
 
-# group by, having 절
+# GROUP BY, HAVING
 
 ---
