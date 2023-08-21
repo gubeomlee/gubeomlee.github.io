@@ -30,6 +30,5 @@ public class SelectionSort {
 		System.out.println(Arrays.toString(arr));
 	}
 }
-
 // [10, 11, 22, 25, 64]
 ```

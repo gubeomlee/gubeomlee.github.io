@@ -40,5 +40,4 @@ public class CountingSort {
 	}
 }
 // [3, 8, 8, 12, 19, 24, 45, 60]
-
 ```

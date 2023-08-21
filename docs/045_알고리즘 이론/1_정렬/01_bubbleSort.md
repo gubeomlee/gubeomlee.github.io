@@ -34,6 +34,5 @@ public class BubbleSort {
 		System.out.println(Arrays.toString(nums));
 	}
 }
-
 // [7, 24, 31, 35, 99, 99999, 213124]
 ```
