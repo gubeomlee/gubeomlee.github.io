@@ -6,7 +6,7 @@ grand_parent: 알고리즘 이론
 nav_order: 4
 ---
 
-# 삽입 정렬
+# 삽입정렬
 
 ---
 

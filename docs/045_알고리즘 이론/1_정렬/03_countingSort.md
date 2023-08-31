@@ -6,7 +6,7 @@ grand_parent: 알고리즘 이론
 nav_order: 3
 ---
 
-# 카운팅 정렬
+# 카운팅정렬
 
 ---
 
