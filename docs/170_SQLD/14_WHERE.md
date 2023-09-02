@@ -24,7 +24,7 @@ SELECT EMPNO, DEPTNO FROM EMP WHERE DEPTNO=10;
 
 #### 비교연산자
 
-- =, >, >=, <, <= 가 있다.
+- =, >, >=, <, <=
 
 ```sql
 SELECT EMPNO, SAL FROM EMP WHERE SAL>=2000;
@@ -32,7 +32,8 @@ SELECT EMPNO, SAL FROM EMP WHERE SAL>=2000;
 
 #### 부정비교연산자
 
-- !=, ^=, <>, NOT = 컴럼명, NOT > 컬럼명
+- 같지 않은 것을 조회: !=, ^=, <>, NOT 컴럼명 =
+- 크지 않은 것을 조회: NOT 컬럼명 >
 
 ```sql
 SELECT * FROM EMP WHERE JOB != 'MANAGER';
@@ -55,6 +56,7 @@ SELECT ENAME, SAL FROM EMP WHERE SAL>=2000;
 
 ```sql
 SELECT EMPNO, ENAME, JOB, FROM EMP WHERE JOB IN ('CLERK', 'SALESMAN');
+SELECT EMPNO, SAL FROM EMP WHERE SAL BETWEEN 1000 AND 2000;
 ```
 
 #### 부정 SQL연산자
@@ -65,6 +67,7 @@ SELECT EMPNO, ENAME, JOB, FROM EMP WHERE JOB IN ('CLERK', 'SALESMAN');
 
 ```sql
 SELECT EMPNO, ENAME, JOB, FROM EMP WHERE JOB NOT IN ('CLERK', 'SALESMAN');
+SELECT EMPNO, SAL FROM EMP WHERE SAL NOT BETWEEN 1000 AND 2000;
 ```
 
 #### LIKE 연산자
@@ -87,6 +90,11 @@ SELECT ENAME, EMPNO FROM EMP WHERE ENAME LIKE '____';
 - NULL 값과 비교연산은 알 수 없음(FALSE)를 반환한다.
 - NULL 값을 조회할 경우 IS NULL을 사용한다.
 - NULL 값이 아닌 것을 조회할 경우 IS NOT NULL을 사용한다.
+
+```sql
+SELECT EMPNO, ENAME, MGR FROM EMP WHERE MGR IS NULL;
+SELECT EMPNO, ENAME, SAL, COMM, FROM EMP WHERE COMM IS NOT NULL;
+```
 
 #### ROWNUM
 
@@ -111,7 +119,7 @@ SELECT * FROM EMP WHERE ROWNUM=2;
 
 #### 연산자 우선순위
 
-1. ()
+1. 괄호()
 2. NOT 연산자
 3. 비교 연산자, SQL 비교 연산자
 4. AND

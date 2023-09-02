@@ -34,6 +34,9 @@ select empno a, ename b from emp;
 
 ## INSERT
 
+- 삽입컬럼을 지정한 경우 나머지는 NULL이 된다.
+- 삽입컬럼을 지정한 경우 NOT NULL 제약조건이 있는 컬럼에 데이터를 입력하지 않으면 오류가 발생한다.
+
 ```sql
 INSERT INTO 테이블명 VALUES(입력값1, 입력값2);
 INSERT INTO 테이블명(<컬럼명1>, <컬럼명2>) VALUES(입력값1, 입력값2);

@@ -15,6 +15,8 @@ nav_order: 16
 - GROUP BY 절은 행들을 소그룹화한다.
 - SELECT, HAVING, ORDER BY에 사용 가능하다.
 - 집계함수명([DISTINCT | ALL] 컬럼 | 표현식) 구조다.
+- DISTINCT: 같은 값을 하나의 데이터로 간주하여 하나만 조회한다.
+- ALL: 기본 옵션으로 생략가능하다.
 
 #### 집계함수 종류
 
