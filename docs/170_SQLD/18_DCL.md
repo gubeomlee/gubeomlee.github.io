@@ -21,6 +21,7 @@ nav_order: 18
 
 - GRANT: 권한을 부여하는 명령어
 - REVOKE: 주어진 권한을 회수하는 명령어
+- TCL(COMMIT, ROLLBACK, SAVEPOINT)를 DCL로 분류하기도 한다.
 
 ```sql
 CREATE USER SQLD IDENTIFIED BY 1234;
@@ -37,6 +38,8 @@ REVOKE CREATE SESSION FROM SQLD;
 ```
 
 ## 오브젝트 권한
+
+- 오브젝트 권한은 테이블, 뷰 등 오브젝트에 대한 SELECT, INSERT, DELETE, UPDATE 작업 명령어를 의미한다.
 
 #### 권한
 
@@ -79,7 +82,7 @@ REVOKE CREATE SESSION,
 CREATE TABLE
 FROM SQLD:
 
-CONN SQLD/1234
+CONN SQLD/1234 // 사용자 SQLD는 CREATE SESSION 권한이 없다.
 ```
 
 ```sql
