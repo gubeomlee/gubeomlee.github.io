@@ -91,6 +91,7 @@ HAVING AVG(SAL)>2000;
 - HAVING은 GROUP BY의 기준 항목이나 소그룹의 집계함수를 이용한 조건을 표시할 수 있다.
 - GROUP BY에 의해 소그룹별로 만들어진 집계 데이터 중 HAVING의 제한조건을 만족하는 내용만 출력된다.
 - HAVING은 일반적으로 GROUP BY뒤에 위치한다.
+- GROUP BY에 사용되지 않은 일반 컬럼은 SELECT나 ORDER BY에 사용할 수 없다.
 
 ## 집계함수와 NULL
 
