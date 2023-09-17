@@ -9,6 +9,26 @@ nav_order: 7
 
 ---
 
+## MVC Pattern
+
+#### Model
+
+- 동작을 수행하는 코드
+- 사용자 View에 어떻게 보일지에 대해서 신경쓰지 않는다.
+- 데이터 질의에 대한 정보를 제공하는 기능 및 데이터에 대한 수정을 담당한다.
+
+#### View
+
+- 사용자가 화면에 무엇을 어떻게 볼 것인지를 결정한다.
+- 사용자 화면에 보이는 부분이다.
+- 모델의 정보를 받아와 사용자에게 보여주는 역할을 수행한다.
+- 자체적으로 모델의 정보를 보관하지 않는다.
+
+#### Controller
+
+- 모델과 뷰를 연결하는 역할을 수행한다.
+- 사용자에게 데이터를 가져오고 수정하고 제공한다.
+
 ## Spring Web MVC
 
 #### Spring Web MVC
@@ -19,6 +39,11 @@ nav_order: 7
 - DispatcherServlet(FrontController)를 중심으로 디자인 되었으며, View Resolver, Handler, Mapping, Controller와 같이 객체와 함께 요청을 처리하도록 구성되어 있다.
 - 다른 프레임워크와 마찬가지로 front controller pattern으로 구성된다.
 - 중심이 되는 DispatcherServlet(front controller)은 요청처리를 위한 기능을 제공한다.
+
+#### 컨테이너 구성
+
+- Servlet WebApplicationContext: controllers, viewResolver, HandlerMapping 등 웹과 직접관련있는 요소가 담긴다.
+- Root WebApplicationContext: Service, Repositories 등 그외의 것이 담긴다.
 
 #### Spring MVC 구성요소
 
