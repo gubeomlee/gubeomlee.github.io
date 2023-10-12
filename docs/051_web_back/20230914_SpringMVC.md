@@ -1,7 +1,7 @@
 ---
 layout: default
 title: SpringMVC
-parent: Java Basic
+parent: Web_Back
 nav_order: 7
 ---
 
