@@ -92,7 +92,7 @@ const isSeen = ref(true);
 const name = ref("Cathy");
 ```
 
-#### HTML <template> element
+#### HTML \<template> element
 
 - 여러요소에 대한 v-if를 적용기 위해서 template 요소에 v-if를 사용한다.
 
@@ -168,7 +168,7 @@ const completeTodos = computed(() => {
 </ul>
 ```
 
-## Waechers
+## Watchers
 
 #### watch()
 
@@ -196,22 +196,118 @@ const messageWatch = watch(message, (newValue, oldValue) => {
 });
 ```
 
+#### Computed, Watchers 비교
+
+- 공통점: 데이터의 변화를 감지하고 처리한다.
+
+|           |                   Computed                   |                      Watchers                       |
+| :-------: | :------------------------------------------: | :-------------------------------------------------: |
+|   동작    | 의존하는 데이터 속성의 계산된 값을 반환한다. | 특정 데이터 속성의 변화를 감시하고 작업을 수행한다. |
+| 사용 목적 |     템플릿 내에서 사용되는 데이터 연산용     |         데이터 변경에 따른 특정 작업 처리용         |
+| 사용 예시 |      연산된 길이, 필터링된 목록 계산 등      |      비동기 API 요청, 연관 데이터 업데이트 등       |
+
 ## LIfecycle Hooks
 
-```html
+- Vue 인스턴스의 생애주기 동안 특정 시점에 실행되는 함수로 개발자가 특정 단계에서 의도하는 로직이 실행될 수 있도록 한다.
+- Vue 컴포넌트 인스턴스가 초기 렌더링 및 DOM 요소 생성이 완료된 후 특정 로직을 수행하기
 
+```javascript
+const { createApp, ref, onMounted } = Vue;
+setup() {
+  onMounted(() => {
+    consol.log('mounted')
+  })
+}
+```
+
+- 반응형 데이터의 변경으로 인해 컴포넌트의 DOM이 업데이트된 후 특정 로직 수행하기
+
+```html
+<button @click="count++">Add 1</button>
+<p>Count: {{count}}</p>
+<p>{{message}}</p>
 ```
 
 ```javascript
+const { createApp, ref, onMounted, onUpdated } = Vue;
 
+const count = ref(0);
+const message = ref(null);
+
+onUpdated(() => {
+  message.value = "updated!";
+});
 ```
 
-## Vue sytle Guilde
+- Vue는 Lifecycle Hooks에 등록된 콜백 함수들을 인스턴스와 자동으로 연결한다.
+- 이렇게 동작하려면 Hooks 함수들은 반드시 동기적으로 작성되어야 한다.
+- 인스턴스 생에 주기의 여러 단계에서 호출되는 다른 Hooks도 있으며, 가장 일반적으로 사용되는 것은 onMounted, onUpdated, onUnmounted
+
+## Vue style Guide
+
+- Vue의 스타일 가이드 규칙은 우선순위에 따라 4가지 범주로 나눈다.
+- 우선순위 A 필수(Essential): 오류를 방지하는 데 도움이 되므로 어떤 경우에도 규칙을 학습하고 준수한다.
+- 우선순위 B 적극 권장(Strongly Recommended): 가독성 및 개발자 경험을 향상시킨다. 규칙을 어겨도 코드는 여전히 실행되지만, 정당한 사유가 있어야 규칙을 위반할 수 있다.
+- 우선순위 C 권장(Recommended): 일관성을 보장하도록 임의의 선택을 할 수 있다.
+- 우선순위 D 주의 필요(Use with Caution): 잠재적 위험 특성을 고려한다.
+
+#### computed의 반환 값은 변경하지 말 것
+
+- computed의 반환 값은 의존하는 데이터의 파생된 값이다.
+- 일종의 snapshot이며 의존하는 데이터가 변경될 때 마다 새 snapshot이 생성된다.
+- snapshot을 변경하는 것은 의미가 없으므로 계산된 반환 값은 읽기 전용으로 취급되어야 하며 변경되어서는 안된다.
+- 대신 새 값을 얻기 위해서 의존하는 데이터를 업데이트 해야 한다.
+
+#### computed 사용 시 원본 배열 변경하지 말 것
+
+- computed에서 reverse() 및 sort() 사용 시 원본 배열을 변경하기 때문에 복사본을 만들어서 진행 해야한다.
+
+```javascript
+return [...numbers].revers();
+```
+
+#### 배열의 인덱스를 v-for의 key로 사용하지 말 것
+
+- 인덱스는 식별자가 아닌 배열의 항목 위치만 나타내기 때문에 Vue가 DOM을 변경할 때 (끝이 아닌 위치에 새 항목이 배열에 삽입되면) 여러 컴포넌트간 데이터 공유 시 문제가 발생한다.
+- 직접 고유한 값을 만들어 내는 메서드를 만들거나 외부 라이브러리 등을 황요하는 등 식별자 역할을 할 수 있는 값을 만들어 사용한다.
+
+#### v-for와 배열: 배열 변경 감지
+
+- 수정 메서드(원본 배열 수정): Vue는 반응형 배열의 변경 메서드가 호출되는 것을 감지하여, 필요한 업데이트를 발생시킨다. push(), pop(), shift(), unshift(), splice(), sort(), reverse()
+- 배열 교체: 원본 배열을 수정하지 않고 항상 새 배열을 반환한다. filter(), concat(), slice()
+
+#### v-for와 배열: 필터링/정렬 결과 표시
+
+- 원본 데이터를 수정하거나 교체하지 않고 필터링 되거나 정렬된 결과를 표시한다.
+- computed 활용
 
 ```html
-
+<li v-for="num in evenNumbers">{{num}}</li>
 ```
 
 ```javascript
+const numbers = ref([1, 2, 3, 4, 5]);
 
+const evenNumbers = computed(() => {
+  return numbers.value.filter((n) => n % 2 === 0);
+});
+```
+
+- method 활용(computed가 불가능한 중첩된 v-for에 있는 경우)
+
+```html
+<ul v-for="numbers in numberSets">
+  <li v-for="num in evenNumbers(numbers)">{{num}}</li>
+</ul>
+```
+
+```javascript
+const numberSets ref([
+  [1,2,3,4,5],
+  [6,7,8,9,10]
+])
+
+const evenNumbers = (numbers) => {
+  return numbers.filter((n) => n % 2 === 0)
+}
 ```
